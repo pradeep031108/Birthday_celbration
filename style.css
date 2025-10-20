@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffdee9, #b5fffc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: gradientSlide 10s infinite alternate;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  animation: bounceIn 1s ease-in;
+}
+
+h1 {
+  color: #ff4081;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+button {
+  background: #ff4081;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e91e63;
+}
+
+.hidden {
+  display: none;
+}
+
+#result {
+  margin-top: 25px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+#userPhoto {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #999;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientSlide {
+  0% { background-position: left; }
+  100% { background-position: right; }
+}
